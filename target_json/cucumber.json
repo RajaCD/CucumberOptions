@@ -1,0 +1,76 @@
+[
+  {
+    "id": "valet-parking",
+    "tags": [
+      {
+        "name": "@QueueProcessor",
+        "line": 1
+      }
+    ],
+    "description": "As a traveler\nIn order to determine where to park my car\nI want to know the cost of valet parking",
+    "name": "Valet Parking",
+    "keyword": "Feature",
+    "line": 2,
+    "elements": [
+      {
+        "id": "valet-parking;calculate-valet--parking-cost-for-half-an-hour",
+        "description": "",
+        "name": "Calculate valet  parking cost for half an hour",
+        "keyword": "Scenario",
+        "line": 7,
+        "steps": [
+          {
+            "result": {
+              "duration": 156899270,
+              "status": "passed"
+            },
+            "name": "I want to park my car in valet parking lot",
+            "keyword": "Given ",
+            "line": 8,
+            "match": {
+              "location": "ValetParking_Steps.i_want_to_park_my_car_in_valet_parking_lot()"
+            }
+          },
+          {
+            "result": {
+              "duration": 5488407,
+              "status": "passed"
+            },
+            "name": "I park my car in the Valet Parking Lot for 30 mins",
+            "keyword": "When ",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "val": "30",
+                  "offset": 43
+                }
+              ],
+              "location": "ValetParking_Steps.i_park_my_car_in_the_Valet_Parking_Lot_for_mins(int)"
+            }
+          },
+          {
+            "result": {
+              "duration": 322108,
+              "status": "passed"
+            },
+            "name": "I will have to pay $12",
+            "keyword": "Then ",
+            "line": 10,
+            "match": {
+              "arguments": [
+                {
+                  "val": "12",
+                  "offset": 20
+                }
+              ],
+              "location": "ValetParking_Steps.i_will_have_to_pay_$(int)"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "valetparking.feature"
+  }
+]
